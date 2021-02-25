@@ -1,0 +1,22 @@
+{
+  "name": "aws-least-privilege",
+  "version": "1.0.0",
+  "description": "Tool for enforcing least privilege principle for IAM roles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run get-data && node .",
+    "blah": "echo $ROLE",
+    "get-data": "AWS_PAGER= aws cloudtrail lookup-events --lookup-attributes AttributeKey=Username,AttributeValue=${ROLE_NAME} > trail.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huttj/aws-least-privilege.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huttj/aws-least-privilege/issues"
+  },
+  "homepage": "https://github.com/huttj/aws-least-privilege#readme"
+}
