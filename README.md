@@ -15,7 +15,7 @@ A tool for enforcing least privilege principle for IAM roles.
 ## Notes
 This is a really rough attempt at constructing a policy based on role/user access patterns. There are some key limitations:
 - It doesn't pull all events from CloudTrail, just the most recent. This may mean key actions are not included in the policy.
-- The approach to constructing the policy is naieve – if an ARN can be extracted from the event, it is used as the "resource" to specify for the action. It is also modified to a wildcard ARN, to improve the flexibility of the policy. This may be undesirable. In a future iteration, it may be desirable to prompt the user to:
+- The approach to constructing the policy is naive – if an ARN can be extracted from the event, it is used as the "resource" to specify for the action. It is also modified to a wildcard ARN, to improve the flexibility of the policy. This may be undesirable. In a future iteration, it may be desirable to prompt the user to:
   1. Use plain wildcards for every action
   2. Use partial wildcards
   3. Prompt on each ARN
